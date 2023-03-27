@@ -1,0 +1,27 @@
+.wrapper {
+  background-color: aqua;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+div.item {
+  background-color: orange;
+  width: 50%;
+}
+
+div.item.right {
+  margin-left: auto;
+}
+
+div.year {
+  width: auto;
+  padding: 40px;
+  margin-right: -2.5px;
+  border-right: 5px solid blue;
+}
+
+div.item.right .year {
+  margin-left: -2.5px;
+  border-left: 5px solid blue;
+  border-right: none;
+}
