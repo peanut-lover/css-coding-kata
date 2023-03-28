@@ -1,37 +1,43 @@
 /* Resets */
 h1,
 p,
-img {
+body {
   padding: 0;
   margin: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0px;
+/* Layout */
+.layout_wrapper {
+  width: auto;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 40px;
 }
 
+/* Module */
 body {
   background-image: url("./images/bg.png");
 }
 
 .box {
-  width: 300px;
-  margin: 400px auto 0;
   color: white;
 }
 
 .box .text {
-  padding: 20px;
+  background-image: url("./images/green.png");
+  background-repeat: repeat-x;
+  background-position: center top;
+  padding: 64px 20px 20px;
   border-radius: 0 0 15px 15px;
   background-color: rgb(142 85 49);
   box-shadow: 0 10px rgb(73 38 14);
 }
 
-.cartoon img {
-  display: block;
+.box .text p {
+  margin-top: 10px;
 }
 
-.cartoon {
-  margin-top: -350px;
+.cartoon img {
+  display: block;
+  margin: 0 auto;
 }
