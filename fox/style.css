@@ -19,11 +19,11 @@ body {
   background-image: url("./images/bg.png");
 }
 
-.box {
+.box-contents {
   color: white;
 }
 
-.box .text {
+.box-contents {
   background-image: url("./images/green.png");
   background-repeat: repeat-x;
   background-position: center top;
@@ -33,11 +33,11 @@ body {
   box-shadow: 0 10px rgb(73 38 14);
 }
 
-.box .text p {
+.box-contents p {
   margin-top: 10px;
 }
 
-.cartoon img {
+.box-cover {
   display: block;
   margin: 0 auto;
 }
