@@ -47,9 +47,9 @@ body {
 }
 
 .box-header::before {
+  /* Help) content를 지정안하고 line-height를 얻을 수 있을까요? */
   content: ".";
   color: transparent;
-
   font-size: inherit;
   position: absolute;
   display: inline-block;
@@ -70,34 +70,32 @@ body {
   padding: 25px;
 }
 
-.box-item-wrapper {
-  width: auto;
-  margin-bottom: 15px;
-
-  border: 5px solid #999;
-  border-radius: 5px;
-}
-
-.box-item-wrapper:last-child {
-  margin-bottom: 0px;
-}
-
-/* 호환성 고려하면 별로인 방법 */
-.box-item-wrapper:focus-within {
-  margin-right: -10px;
-  margin-left: -10px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
-  border-color: var(--blue-color);
-  color: var(--blue-color);
-}
-
 .box-item {
+  outline: unset;
   color: inherit;
   background-color: white;
   padding: 10px;
-  outline: unset;
   text-align: left;
-  width: 100%;
+  display: block;
+  width: auto;
+  border: 5px solid #999;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.box-item:last-child {
+  margin-bottom: 0px;
+}
+
+.box-item:focus {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 5px;
+  font-weight: 700;
 }
 
 .footer {
