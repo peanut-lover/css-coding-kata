@@ -1,6 +1,8 @@
 /*  Resets */
 
-h1 {
+h1,
+p {
+  padding: 0;
   margin: 0;
 }
 
@@ -27,7 +29,7 @@ body {
 }
 
 .l_wrapper {
-  width: 50%;
+  width: 300px;
   margin: 100px auto;
 }
 
@@ -61,7 +63,6 @@ body {
   font-size: inherit;
   padding: 0 20px;
   color: var(--pink-color);
-  /* border-left: 10px solid var(--pink-color); */
 }
 
 .box-contents {
@@ -71,32 +72,53 @@ body {
 
 .box-item-wrapper {
   width: auto;
-  margin: 0px 0px 15px;
-}
+  margin-bottom: 15px;
 
-/* 호환성 안좋음.
-https://caniuse.com/?search=%3Afocus-within
-*/
-.box-item-wrapper:focus-within {
-  margin: 0px -10px 15px;
-}
-
-.box-item {
-  width: 100%;
-  display: block;
-  background-color: white;
   border: 5px solid #999;
   border-radius: 5px;
-  padding: 10px;
-  outline: unset;
-  text-align: left;
 }
 
-.box-item:last-child {
+.box-item-wrapper:last-child {
   margin-bottom: 0px;
 }
 
-.box-item:focus {
+/* 호환성 고려하면 별로인 방법 */
+.box-item-wrapper:focus-within {
+  margin-right: -10px;
+  margin-left: -10px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.2);
   border-color: var(--blue-color);
   color: var(--blue-color);
+}
+
+.box-item {
+  color: inherit;
+  background-color: white;
+  padding: 10px;
+  outline: unset;
+  text-align: left;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.footer .copyright {
+  color: gray;
+  vertical-align: center;
+  font-size: 0.5rem;
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-top: 1px solid #999;
+  border-radius: 1px;
+  margin: 0 1rem;
+  height: 0px;
 }
