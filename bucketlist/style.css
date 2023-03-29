@@ -4,6 +4,11 @@ h1 {
   margin: 0;
 }
 
+button {
+  border-style: none;
+  background-color: transparent;
+}
+
 ul,
 li {
   list-style: none;
@@ -64,13 +69,24 @@ body {
   padding: 25px;
 }
 
+.box-item-wrapper {
+  width: auto;
+  margin: 0px 0px 15px;
+}
+
+/* 호환성 안좋음.
+https://caniuse.com/?search=%3Afocus-within
+*/
+.box-item-wrapper:focus-within {
+  margin: 0px -10px 15px;
+}
+
 .box-item {
-  display: block;
   width: 100%;
+  display: block;
   background-color: white;
   border: 5px solid #999;
   border-radius: 5px;
-  margin-bottom: 15px;
   padding: 10px;
   outline: unset;
   text-align: left;
