@@ -1,9 +1,20 @@
+/* CSS Variable */ 
+:root {
+  --pink-color: rgb(252 15 145);
+  --blue-color: rgb(19 145 252);
+}
+
+
 /*  Resets */
 
 h1,
 p {
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  font-size: inherit;
 }
 
 button {
@@ -14,23 +25,30 @@ button {
 ul,
 li {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Typography */
+:root {
+  /* 명시적으로 REM의 기준 표시 */
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.6rem;
 }
 
 /* Module */
-:root {
-  --pink-color: rgb(252 15 145);
-  --blue-color: rgb(19 145 252);
-}
-
 body {
   background-color: #ccc;
 }
 
 .l_wrapper {
-  width: 300px;
+  width: auto;
+  max-width: 800px;
   margin: 100px auto;
+  padding: 0 20px;
 }
 
 .box {
@@ -41,28 +59,24 @@ body {
 }
 
 .box-header {
-  font-size: 2rem;
+  font-size: 5rem;
   padding: 30px 0;
   border-bottom: 5px solid rgb(219, 219, 219);
+  color: var(--pink-color);
+  
 }
 
 .box-header::before {
-  /* Help) content를 지정안하고 line-height를 얻을 수 있을까요? */
-  content: ".";
-  color: transparent;
-  font-size: inherit;
+  content: " ";
   position: absolute;
-  display: inline-block;
-  line-height: 1;
-  width: 0.5rem;
-  border-radius: 0 0.25rem 0.25rem 0;
-  background-color: var(--pink-color);
+  height: 1em;
+  width: 0.25em;
+  border-radius: 0 0.25em 0.25em 0;
+  background-color: currentColor;
 }
 
 .box-title {
-  font-size: inherit;
   padding: 0 20px;
-  color: var(--pink-color);
 }
 
 .box-contents {
