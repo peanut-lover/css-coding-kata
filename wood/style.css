@@ -16,7 +16,7 @@ ul {
 
 /* Typography */
 * {
-    font-size: 10px;
+    font-size: 0.625rem;
 }
 
 h1 {
@@ -60,23 +60,23 @@ h1 {
     max-width: fit-content;
     border-bottom: 2px solid;
     margin-bottom: 3rem;
+    font-size: 2rem;
     font-weight: 500;
 }
 
-.intro-contents p {
-    font-size: 1.2rem;
-}
-
-.lg-title {
+.intro-contents .title big {
     font-size: inherit;
     font-weight: 700;
+} 
+
+.intro-contents p {
+    font-size: 1.2rem;
 }
  
 .intro .intro-cover {
     flex-shrink: 0;
     width: 200px;
-    margin-bottom: -10%;
-
+    margin-bottom: -80px;
 }
 
 .intro .intro-cover img {
