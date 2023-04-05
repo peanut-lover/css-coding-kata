@@ -1,0 +1,138 @@
+/* CSS Variables */
+:root {
+  --main-orange-color: rgb(253, 165, 41);
+  --main-bg-gray-color: rgb(221, 221, 221);
+}
+
+/* Resets */
+body,
+ul,
+li,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Typography */
+:root {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* Modules */
+
+.header {
+  padding-top: 80px;
+  background-image: url("./images/header-bg.png");
+  color: var(--main-orange-color);
+}
+
+/* Layout */
+
+.l_wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.intro {
+  padding: 3rem;
+  border-bottom: 0;
+  border-style: solid;
+  border-width: 30px 30px 0 30px;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+
+  align-items: flex-start;
+}
+
+.intro .intro-contents {
+  flex-grow: 1;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.intro-contents .title {
+  letter-spacing: 1rem;
+  max-width: fit-content;
+  border-bottom: 2px solid;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.intro-contents .lg-title {
+  font-weight: 700;
+}
+
+.intro-contents p {
+  font-size: 1.2rem;
+}
+
+.intro-cover {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 200px;
+  margin-bottom: -80px;
+}
+
+.contents {
+  background-color: var(--main-bg-gray-color);
+  padding: 2rem 0;
+  border-bottom: 2px solid #999;
+  color: var(--main-orange-color);
+}
+
+.items {
+  display: flex;
+  gap: 2rem;
+}
+
+.item {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item-cover {
+  width: 100%;
+  border-bottom: 2px solid;
+}
+
+.item-info {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.item-title {
+  margin-left: 1rem;
+}
+
+.item-icon {
+  margin-left: auto;
+}
+
+.footer {
+  color: rgb(210 210 210);
+  letter-spacing: 0.5em;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
