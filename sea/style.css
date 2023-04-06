@@ -1,0 +1,180 @@
+/* Colors */
+:root {
+  --header-bg-color: rgb(14 101 164);
+  --header-nav-bg-color: rgb(25 145 208);
+  --title-color: rgb(31 148 209);
+  --text-color: rgb(176 176 176);
+  --wave-right-margin: 50px;
+  --footer-bg-color: rgb(51 51 51);
+}
+
+/* Resets */
+
+body,
+nav,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  all: unset;
+}
+
+h1,
+h2,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Typography */
+:root {
+  font-size: 62.5%; /* 10px */
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* Layout */
+.l_wrapper {
+  width: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--wave-right-margin);
+}
+
+/* Modules */
+.header {
+  background-color: var(--header-bg-color);
+}
+
+.header-logo {
+  margin: 30px 0;
+  height: 100px;
+}
+
+.header-nav {
+  position: relative;
+  display: flex;
+  background-color: var(--header-nav-bg-color);
+}
+
+.header-nav-items {
+  display: flex;
+  color: white;
+  position: relative;
+}
+
+.header-nav-item {
+  padding: 15px;
+}
+
+.header-nav-item.select {
+  background-color: white;
+  color: black;
+}
+
+.header-nav-cover {
+  margin-top: -200px;
+  margin-left: auto;
+  margin-right: calc(-1 * var(--wave-right-margin));
+}
+
+.main {
+  background-color: rgb(240 240 240);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.main h1 {
+  color: var(--title-color);
+  font-size: 2rem;
+}
+
+.container {
+  display: flex;
+  background-color: white;
+  gap: 40px;
+  padding: 20px;
+}
+
+.contents {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.contents .box {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-bottom: 2px dashed;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.contents .box:first-child {
+  padding-top: 0px;
+}
+
+.contents .box:last-child {
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}
+
+.box-info {
+  overflow-wrap: break-word;
+  min-width: 0px;
+}
+
+.box-info h1 {
+  margin-bottom: 1rem;
+}
+
+.summary {
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+
+.summary h1 {
+  margin-bottom: 1em;
+}
+
+.summary p {
+  border-left: 0.2rem solid;
+  padding-left: 1rem;
+  line-height: 2;
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+}
+
+.footer-container {
+  display: flex;
+  padding: 20px 0;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-logo {
+  margin-right: auto;
+}
+
+.footer-section {
+  font-size: 1rem;
+  color: rgb(89 89 89);
+  padding: 0 0.5rem;
+}
+
+.footer-section h2 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
