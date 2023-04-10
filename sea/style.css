@@ -9,7 +9,6 @@
 }
 
 /* Resets */
-
 body,
 nav,
 ul {
@@ -82,7 +81,7 @@ body {
 .header-nav-item a {
   display: flex;
   padding: 15px;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   text-align: center;
 }
@@ -103,7 +102,7 @@ body {
   bottom: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .header-nav-cover {
     display: none;
   }
@@ -143,7 +142,7 @@ body {
   padding-bottom: 20px;
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .contents .box {
     flex-direction: column;
     align-items: center;
@@ -177,7 +176,7 @@ body {
   flex-basis: 200px;
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .summary {
     display: none;
   }
