@@ -52,11 +52,11 @@ body {
 /* Modules */
 .header {
   background-color: var(--header-bg-color);
+  position: relative;
 }
 
 .header-logo {
-  margin: 30px 0;
-  height: 100px;
+  margin: 30px 0; 
 }
 
 .header-nav {
@@ -68,7 +68,6 @@ body {
 .header-nav-items {
   display: flex;
   color: white;
-  position: relative;
 }
 
 .header-nav-item {
@@ -81,9 +80,9 @@ body {
 }
 
 .header-nav-cover {
-  margin-top: -200px;
-  margin-left: auto;
-  margin-right: calc(-1 * var(--wave-right-margin));
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .main {
