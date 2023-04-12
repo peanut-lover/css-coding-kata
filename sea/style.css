@@ -11,7 +11,10 @@
 /* Resets */
 body,
 nav,
-ul {
+ul,
+h1,
+h2,
+p {
   margin: 0px;
   padding: 0px;
 }
@@ -22,13 +25,6 @@ li {
 
 a {
   all: unset;
-}
-
-h1,
-h2,
-p {
-  margin: 0px;
-  padding: 0px;
 }
 
 /* Typography */
@@ -46,6 +42,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 50px;
+  position: relative;
 }
 
 /* Modules */
@@ -56,7 +53,6 @@ body {
 }
 .header {
   background-color: var(--header-bg-color);
-  position: relative;
 }
 
 .header-logo {
@@ -67,45 +63,28 @@ body {
   position: relative;
   display: flex;
   background-color: var(--header-nav-bg-color);
-}
-
-.header-nav-item--wrapper {
-  display: flex;
   color: white;
 }
 
-.header-nav-item {
-  display: flex;
-}
-
 .header-nav-item a {
-  display: flex;
+  display: block;
   padding: 15px;
-  justify-content: stretch;
-  align-items: center;
-  text-align: center;
+  cursor: pointer;
 }
 
 .header-nav-item a:hover {
-  background-color: white;
-  color: orange;
+  background-color: rgb(255, 255, 255, 0.6);
 }
 
-.header-nav-item a.select {
+.header-nav-item a.is_select {
   background-color: white;
   color: black;
 }
 
-.header-nav-cover {
+.header-cover {
   position: absolute;
-  right: -50px;
-  bottom: 0;
-}
-
-@media (max-width: 1000px) {
-  .header-nav-cover {
-    display: none;
-  }
+  right: 0px;
+  bottom: 0px;
 }
 
 .main {
@@ -115,12 +94,7 @@ body {
   font-weight: 600;
 }
 
-.main h1 {
-  color: var(--title-color);
-  font-size: 2rem;
-}
-
-.contents--wrapper {
+.container {
   display: flex;
   background-color: white;
   gap: 40px;
@@ -128,12 +102,23 @@ body {
   margin-bottom: 20px;
 }
 
-.contents {
+.container-contents {
   flex-grow: 1;
   min-width: 0;
 }
 
-.contents .box {
+.container-sidebar {
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+
+.title {
+  color: var(--title-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.box {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -142,22 +127,11 @@ body {
   padding-bottom: 20px;
 }
 
-@media (max-width: 1000px) {
-  .contents .box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .box-img {
-    width: 100%;
-  }
-}
-
-.contents .box:first-child {
+.box:first-child {
   padding-top: 0px;
 }
 
-.contents .box:last-child {
+.box:last-child {
   padding-bottom: 0px;
   border-bottom: 0px;
 }
@@ -165,25 +139,6 @@ body {
 .box-info {
   overflow-wrap: break-word;
   min-width: 0px;
-}
-
-.box-info h1 {
-  margin-bottom: 1rem;
-}
-
-.summary {
-  flex-shrink: 0;
-  flex-basis: 200px;
-}
-
-@media (max-width: 1000px) {
-  .summary {
-    display: none;
-  }
-}
-
-.summary h1 {
-  margin-bottom: 1em;
 }
 
 .summary p {
@@ -196,7 +151,7 @@ body {
   background-color: var(--footer-bg-color);
 }
 
-.footer--wrapper {
+.footer-inside {
   display: flex;
   padding: 20px 0;
   align-items: flex-start;
@@ -208,7 +163,6 @@ body {
 }
 
 .footer-section {
-  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,36 +177,51 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.footer-icon--container {
+.icons {
   display: flex;
   gap: 5px;
 }
 
-.footer-icon {
+.icon-item {
   background-image: url("./images/icon-sprite.png");
   width: 30px;
   height: 30px;
   cursor: pointer;
+  text-indent: -999px;
+  overflow: hidden;
 }
 
-.footer-icon[data="twitter"] {
-  background-position: 0px 0px;
-}
-.footer-icon[data="twitter"]:hover {
-  background-position: 0px 30px;
+.icon-item:hover {
+  background-position-y: 30px;
 }
 
-.footer-icon[data="pinterest"] {
-  background-position: 30px 0px;
-}
-.footer-icon[data="pinterest"]:hover {
-  background-position: 30px 30px;
+.icon-item[data-icon="twitter"] {
+  background-position-x: 0px;
 }
 
-.footer-icon[data="facebook"] {
-  background-position: 60px 0px;
+.icon-item[data-icon="pinterest"] {
+  background-position-x: 30px;
 }
 
-.footer-icon[data="facebook"]:hover {
-  background-position: 60px 30px;
+.icon-item[data-icon="facebook"] {
+  background-position-x: 60px;
+}
+
+@media (max-width: 1000px) {
+  .header-nav-cover {
+    display: none;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-cover {
+    width: 100%;
+  }
+
+  .container-sidebar {
+    display: none;
+  }
 }
