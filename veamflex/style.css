@@ -4,11 +4,11 @@
   --sidebar-bg-color: rgb(17 17 17);
   --content-bg-color: rgb(34 34 34);
 
-  --header-font-color: rgb(130 130 130);
   --main-font-color: rgb(130 130 130);
   --highlight-font-color: rgb(197 104 96);
 
-  --button-color: rgb(17 17 17);
+  --button-bg-color: rgb(17 17 17);
+  --pink-color: rgb(241 184 193);
 }
 
 /* Resets */
@@ -51,7 +51,7 @@ body {
 }
 
 .header {
-  color: var(--header-font-color);
+  color: var(--main-font-color);
   display: flex;
   align-items: center;
   height: 150px;
@@ -175,7 +175,7 @@ body {
 .box-title {
   margin: 1rem 1rem 0px;
   font-size: 1.2rem;
-  color: rgb(241 184 193);
+  color: var(--pink-color);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -191,7 +191,7 @@ body {
   all: unset;
   margin: auto 1rem 0.5rem;
   border-radius: 3px;
-  background-color: var(--button-color);
+  background-color: var(--button-bg-color);
   text-align: center;
   padding: 10px;
   font-size: 1rem;
