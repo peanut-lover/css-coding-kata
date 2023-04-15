@@ -100,10 +100,12 @@ body {
 .contents {
   display: flex;
   flex-grow: 1;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-wrap: wrap; 
   min-width: 0;
+  /* gap: 20px; */  
 }
+
+
 
 .sidebar-header {
   margin-bottom: 1rem;
@@ -163,13 +165,29 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--content-bg-color);
-  flex-basis: 240px;
-  flex-grow: 1;
+  flex-basis: calc(33.333% - 8px);
   flex-shrink: 0;
-  max-width: 240px;
   min-width: 0px;
-  border-radius: 5px;
-  overflow: hidden;
+  border-radius: 5px;  
+  margin-top: 12px;
+  margin-left: 12px;
+  overflow:hidden;
+}
+
+.box:nth-child(3n + 1) {  
+  margin-left: 0px; 
+}
+
+
+@media screen and (max-width: 800px) {
+  .contents {
+    gap: 20px;
+  }
+
+  .box  { 
+    flex-basis: 100%;
+    margin: 0px;
+  } 
 }
 
 .box-title {
