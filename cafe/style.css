@@ -1,0 +1,55 @@
+/* Resets */
+body, h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Typography */
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+/* Module */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+.banner {
+    position: relative;
+}
+
+.banner-cover {
+    aspect-ratio: 16 / 9;
+    vertical-align: top;
+    object-fit: cover;
+    width: 100%; 
+}
+
+.banner-title {
+    position:absolute;
+    bottom: 0px;
+    left: 10px;
+    color: white;
+    font-size: 5vh;
+}
+
+@media (min-width: 1200px){
+    .banner {
+        position: fixed; 
+        height: 100%;
+        width: 50%; 
+    }
+    .banner-cover { 
+        height: 100%;
+    }
+    .banner-title {
+        font-size: 10vh;
+    }
+}
