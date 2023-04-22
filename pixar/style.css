@@ -1,12 +1,39 @@
 :root {
   --header-bg-color: rgb(49 55 62);
+  --main-font-color: rgb(141 142 146);
   --content-bg-color: rgb(28 31 35);
   --nav-item-bg-color: rgb(40 44 50);
+  --footer-bg-color: rgb(24 28 31);
+}
+
+.white {
+  color: white;
+}
+.orange {
+  color: orange;
+}
+.orangered {
+  color: orangered;
+}
+.red {
+  color: red;
+}
+.skyblue {
+  color: skyblue;
+}
+.purple {
+  color: purple;
+}
+.green {
+  color: green;
 }
 
 /* Resets */
-body {
+body,
+h1,
+p {
   margin: 0px;
+  padding: 0px;
 }
 
 ul {
@@ -25,10 +52,58 @@ body {
 }
 
 /* Layouts */
-
 .l_wrapper {
   margin: 0px auto;
   padding: 0 20px;
+}
+
+.l_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  row-gap: 40px;
+}
+
+.l_col {
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.l_col_12_12 {
+  width: 100%;
+}
+.l_col_11_12 {
+  width: 91.66666667%;
+}
+.l_col_10_12 {
+  width: 83.33333333%;
+}
+.l_col_9_12 {
+  width: 75%;
+}
+.l_col_8_12 {
+  width: 66.66666667%;
+}
+.l_col_7_12 {
+  width: 58.33333333%;
+}
+.l_col_6_12 {
+  width: 50%;
+}
+.l_col_5_12 {
+  width: 41.66666667%;
+}
+.l_col_4_12 {
+  width: 33.33333333%;
+}
+.l_col_3_12 {
+  width: 25%;
+}
+.l_col_2_12 {
+  width: 16.66666667%;
+}
+.l_col_1_12 {
+  width: 8.33333333%;
 }
 
 /* Components */
@@ -59,8 +134,53 @@ body {
 }
 
 .nav-item_select {
-  color: rgb(255 255 255);
   background-color: var(--content-bg-color);
+  color: rgb(255 255 255);
+}
+
+.main {
+  background-color: var(--content-bg-color);
+}
+
+.gallery {
+  padding: 2rem 0px;
+}
+
+.box {
+  background-color: rgb(17 17 17);
+  border-radius: 1.5rem;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.box-cover {
+  width: 100%;
+  vertical-align: top;
+}
+
+.box-info {
+  border-top: 0.5rem solid;
+  padding: 1rem;
+  min-height: 200px;
+}
+
+.box-info-title {
+  margin-bottom: 1rem;
+}
+
+.box-info-description {
+  color: var(--main-font-color);
+}
+
+.footer {
+  background-color: var(--footer-bg-color);
+  border-top: 1px solid rgb(54 55 58);
+  padding: 3rem;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: var(--main-font-color);
 }
 
 /* Mediaquries */
