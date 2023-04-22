@@ -1,0 +1,73 @@
+:root {
+  --header-bg-color: rgb(49 55 62);
+  --content-bg-color: rgb(28 31 35);
+  --nav-item-bg-color: rgb(40 44 50);
+}
+
+/* Resets */
+body {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+/* Typography */
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* Layouts */
+
+.l_wrapper {
+  margin: 0px auto;
+  padding: 0 20px;
+}
+
+/* Components */
+
+.header {
+  padding-top: 2rem;
+  background-color: var(--header-bg-color);
+}
+
+.header-cover {
+  display: block;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-item-bg-color);
+}
+
+.nav-item {
+  color: rgb(141 142 146);
+  padding: 2rem;
+  min-width: 0px;
+  text-align: center;
+}
+
+.nav-item_select {
+  color: rgb(255 255 255);
+  background-color: var(--content-bg-color);
+}
+
+/* Mediaquries */
+/* Tablet */
+@media (max-width: 1024px) {
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+}
