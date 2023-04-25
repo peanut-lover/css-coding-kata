@@ -112,6 +112,7 @@ body {
 .menu-item-cover img {
   width: 100%;
   vertical-align: top;
+  aspect-ratio: 3 / 2;
 }
 
 .menu-item-cover-text {
