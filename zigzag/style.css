@@ -1,0 +1,79 @@
+/* Resets */
+body,
+h1,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Typography */
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* Layout */
+.l_wrapper {
+  margin: 0px auto;
+  width: 1080px;
+}
+
+.l_page {
+  height: 90vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.bg_purple {
+  background-color: rgb(103 54 150);
+}
+
+/* Components */
+
+.intro {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.intro-title {
+  color: white;
+  width: 26%;
+  flex-shrink: 0;
+  font-size: 40px;
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  line-height: 1.2;
+}
+
+.highlight::after {
+  z-index: -1;
+  content: " ";
+  position: absolute;
+  height: 0.6em;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgb(252 72 30);
+}
+
+.intro-seperator {
+  border-top: 2px solid rgb(170 127 213);
+  width: 100px;
+}
+
+.intro-description {
+  color: rgb(170 127 213);
+  font-size: 14px;
+  width: 520px;
+  padding: 20px;
+}
