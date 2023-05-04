@@ -3,10 +3,12 @@
   --card-bg-color: rgb(244 247 248);
   --purple-color: rgb(94 95 157);
   --red-color: rgb(234 98 104);
+  --gray-color: #999999;
 }
 
 /* Resets */
-body {
+body,
+p {
   margin: 0px;
 }
 
@@ -42,7 +44,7 @@ body {
 }
 
 .main {
-  padding-top: 50px;
+  padding: 50px 0px;
 }
 
 .card_list {
@@ -59,15 +61,14 @@ body {
   background-color: white;
   border-radius: 5px;
   padding: 2rem;
-  margin-bottom: 2rem;
   display: flex;
   gap: 2rem;
   flex-direction: row;
+  margin-bottom: 2rem;
 }
 
-.card-side {
+.card-side_left {
   flex-shrink: 0;
-  width: 50px;
 }
 
 .card-contents {
@@ -81,8 +82,6 @@ body {
 .card-contents-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
 }
 
 .card-contents-header-left {
@@ -94,13 +93,12 @@ body {
 .card-contents-header-right {
   display: flex;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .card-contents-body {
-  color: #999999;
+  color: var(--gray-color);
   overflow: hidden;
-  /* word-break: break-all 없이 1글자가 너무 긴것을 막을 수 없나요? */
-  /* word-break: break-all; */
 }
 
 .card-contents-footer {
@@ -115,7 +113,7 @@ body {
   min-width: 0px;
 }
 
-.user-cover {
+.profile_image {
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -141,14 +139,13 @@ body {
   flex-shrink: 0;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #999999;
+  color: var(--gray-color);
   margin: 0 1rem;
 }
 
 .action_btn {
   all: unset;
   cursor: pointer;
-  margin-left: auto;
   padding: 10px;
 }
 
@@ -163,6 +160,19 @@ body {
 .action_btn-text {
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+.send_btn {
+  all: unset;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: var(--purple-color);
+  color: white;
+}
+.send_btn:hover {
+  opacity: 0.6;
 }
 
 .vote {
@@ -203,13 +213,16 @@ body {
   vertical-align: bottom;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.comment_input {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  width: 100%;
+  height: 80px;
+  resize: none;
+  outline: none;
+  border: 2px solid rgb(246 246 246);
+  border-radius: 5px;
+  color: var(--gray-color);
 }
 
 /* Util */
@@ -221,15 +234,24 @@ body {
 
 /* Mobile */
 @media (max-width: 480px) {
+  .main {
+    padding: 25px 0px;
+  }
+
   .card_list-sub {
     margin-left: 0px;
     padding-left: 20px;
   }
   .card {
+    padding: 1.5rem;
     flex-direction: column-reverse;
   }
 
-  .card-side {
+  .card-side_left {
+    display: none;
+  }
+
+  .card-side_right {
     display: none;
   }
 
@@ -241,7 +263,9 @@ body {
     display: flex;
     justify-content: flex-start;
   }
-
+  .card-contents-footer-left {
+    min-width: 0px;
+  }
   .card-contents-footer-right {
     margin-left: auto;
     display: flex;
