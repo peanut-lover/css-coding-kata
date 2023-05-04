@@ -8,7 +8,8 @@
 
 /* Resets */
 body,
-p {
+p,
+h1 {
   margin: 0px;
 }
 
@@ -20,7 +21,6 @@ p {
 }
 
 /* Typography */
-
 :root {
   font-size: 62.5%;
 }
@@ -227,6 +227,73 @@ body {
   color: var(--gray-color);
 }
 
+.modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  inset: 0px;
+}
+
+.modal-card {
+  position: absolute;
+  inset: 0px;
+  margin: auto;
+  width: 300px;
+  height: 180px;
+  border-radius: 5px;
+  padding: 2.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-card-header {
+  font-size: 1.6rem;
+}
+
+.modal-card-body {
+  overflow: scroll;
+  flex-grow: 1;
+}
+
+.modal-text {
+  color: var(--gray-color);
+}
+
+.modal-card-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.modal-card-footer-right {
+  flex-grow: 1;
+}
+.modal-card-footer-left {
+  flex-grow: 1;
+}
+
+.modal_btn {
+  all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--gray-color);
+}
+
+.modal_btn:hover {
+  opacity: 0.6;
+}
+
+.bg_red {
+  background-color: var(--red-color);
+}
+
 /* Util */
 .prevent-select {
   -webkit-user-select: none; /* Safari */
@@ -271,5 +338,10 @@ body {
   .card-contents-footer-right {
     margin-left: auto;
     display: flex;
+  }
+
+  .modal-card {
+    margin: auto 2rem;
+    width: auto;
   }
 }
