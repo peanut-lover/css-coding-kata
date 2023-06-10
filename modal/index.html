@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <style>
+      .modal_open {
+        overflow: hidden;
+      }
+
+      h1 {
+        margin: 0px;
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        overflow: scroll;
+        padding: 20px;
+      }
+
+      .window {
+        margin: auto;
+        flex-grow: 1;
+        max-width: 500px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .window-content {
+        line-height: 1.4;
+        padding: 0px;
+      }
+
+      .window-footer {
+        display: flex;
+        gap: 5px;
+        margin-left: 50%;
+      }
+
+      .button_wrapper {
+        flex: 1;
+      }
+
+      .button_wrapper .button {
+        width: 100%;
+        padding: 5px 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="modal_open">
+    <h1>Hello world</h1>
+    <div class="modal">
+      <div class="window">
+        <h1>Modal Title</h1>
+
+        <p class="window-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+          aspernatur inventore asperiores, repellendus accusantium cupiditate.
+          Possimus in doloribus cupiditate explicabo quasi reprehenderit
+          corrupti laborum fugiat voluptatem? Vel officiis deleniti iure?
+        </p>
+
+        <footer class="window-footer">
+          <div class="button_wrapper">
+            <button class="button">Ok</button>
+          </div>
+          <div class="button_wrapper">
+            <button class="button">Close</button>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
