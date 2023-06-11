@@ -56,7 +56,7 @@ body {
   gap: 1rem;
   overflow: hidden;
 
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .intro .intro-contents {
@@ -85,7 +85,7 @@ body {
 .intro-cover {
   flex-shrink: 0;
   flex-grow: 0;
-  flex-basis: 200px;
+  /* flex-basis: 200px; */
   margin-bottom: -80px;
 }
 
@@ -111,7 +111,6 @@ body {
 }
 
 .item-cover {
-  width: 100%;
   border-bottom: 2px solid;
 }
 
